@@ -1,7 +1,13 @@
 ---
 - name: Creating Router
   os_router:
-    cloud: mycloud
+    auth:
+      auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     name: "{{ router_name }}"
     network: "{{ router_gateway }}"
