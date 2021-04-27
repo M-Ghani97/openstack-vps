@@ -1,0 +1,10 @@
+- name: Creating 
+  os_server:
+       state: present
+       cloud: mycloud
+       name: vm1
+       image: 
+       key_name: 
+       timeout: 200
+       flavor: 
+       netowrk: 

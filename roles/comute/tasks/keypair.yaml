@@ -1,0 +1,6 @@
+- name: Creating Keypair
+  os_keypair:
+      cloud: mycloud
+      state: present
+      name: "{{ keypair_name }}"
+      public_key_file: "{{ public_key_path }}"

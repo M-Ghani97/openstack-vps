@@ -1,0 +1,42 @@
+---
+- name: Creating Public Network
+  os_network:
+    cloud: mycloud
+    state: present
+    name: "{{ public_network_name }}"
+    external: true
+    provider_network_type: "{{ provider_network_type }}"
+    provider_physical_network: "{{ provider_physical_network }}"
+
+- name: Creating Public Subnet
+  os_subnet:
+    cloud: mycloud
+    state: present
+    network_name: "{{ public_network_name }}"
+    name: "{{ public_subnet_name }}"
+    cidr: "{{ public_subnet_cidr }}"
+    dns_nameservers:
+      - "{{ public_dns_nameserver }}"
+
+- name: Creating Private Network
+  os_network:
+    # auth:
+    #   auth_url: http://10.82.3.91:35357/v3
+    #   username: admin
+    #   password: KerR9sbZTYSqj3E6BxRagcdmmgTtsQogdAeBbJr5
+    #   project_name: admin
+    #   os_user_domain_name: Default
+    #   os_project_domain_name: Default
+    cloud: mycloud
+    state: present
+    name: "{{ private_network_name }}"
+
+- name: Creating Private Subnet
+  os_subnet:
+    cloud: mycloud
+    state: present
+    network_name: "{{ private_network_name }}"
+    name: "{{ private_subnet_name }}"
+    cidr: "{{ private_subnet_cidr }}"
+    dns_nameservers:
+      - "{{ private_dns_nameserver }}"

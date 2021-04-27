@@ -1,0 +1,11 @@
+---
+- name: Creating Router
+  os_router:
+    cloud: mycloud
+    state: present
+    name: "{{ router_name }}"
+    network: "{{ router_gateway }}"
+    external_fixed_ips:
+      - subnet: "{{ router_external_ip_subnet }}"
+    interfaces:
+      - "{{ router_interfaces }}"

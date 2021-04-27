@@ -1,0 +1,26 @@
+- name: Creating Flavor [VPS 1vCPU 9GB]
+  os_nova_flavor:
+    cloud: mycloud
+    state: present
+    name: "VPS 1vCPU 9GB"
+    ram: "9216"
+    vcpus: "1"
+    disk: "1"
+
+- name: Creating Flavor [VPS 1vCPU 5GB]
+  os_nova_flavor:
+    cloud: mycloud
+    state: present
+    name: "VPS 1vCPU 5GB"
+    ram: "5120"
+    vcpus: "1"
+    disk: "1"
+
+- name: Creating Flavor [VPS 1vCPU 3GB]
+  os_nova_flavor:
+    cloud: mycloud
+    state: present
+    name: "VPS 1vCPU 3GB"
+    ram: "3072"
+    vcpus: "1"
+    disk: "1"

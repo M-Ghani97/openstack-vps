@@ -1,0 +1,10 @@
+clouds:
+  mycloud:
+    region_name: RegionOne
+    auth:
+      auth_url: http://10.82.3.91:35357/v3
+      username: admin
+      password: KerR9sbZTYSqj3E6BxRagcdmmgTtsQogdAeBbJr5
+      project_name: admin
+      os_user_domain_name: Default
+      os_project_domain_name: Default
