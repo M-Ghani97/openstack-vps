@@ -1,7 +1,12 @@
 - name: Creating VPS
   os_server:
     state: present
-    cloud: mycloud
+    auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     name: "{{ item.name }}"
     image: "{{ vps_image }}"
     key_name: "{{ keypair_name }}"
@@ -12,8 +17,8 @@
     security_groups: default
     auto_ip: yes
   loop:
-    - {name: vps-1, flavor: "VPS 1vCPU 9GB", disk: "400"}     
-    - {name: vps-2, flavor: "VPS 1vCPU 5GB", disk: "120"}     
-    - {name: vps-3, flavor: "VPS 1vCPU 3GB", disk: "40"}     
-    - {name: vps-4, flavor: "VPS 1vCPU 3GB", disk: "40"}     
-    - {name: vps-4, flavor: "VPS 1vCPU 3GB", disk: "40"}     
+    - {name: vps-1, flavor: "VPS 1vCPU 9GB", disk: "1"}     
+    # - {name: vps-2, flavor: "VPS 1vCPU 5GB", disk: "120"}     
+    # - {name: vps-3, flavor: "VPS 1vCPU 3GB", disk: "40"}     
+    # - {name: vps-4, flavor: "VPS 1vCPU 3GB", disk: "40"}     
+    # - {name: vps-4, flavor: "VPS 1vCPU 3GB", disk: "40"}     

@@ -3,7 +3,7 @@
     cloud: mycloud
     state: present
     name: "VPS 1vCPU 9GB"
-    ram: "9216"
+    ram: "512"
     vcpus: "1"
     disk: "1"
 
