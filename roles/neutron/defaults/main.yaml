@@ -1,4 +1,8 @@
 ---
+username: admin
+project_name: admin
+os_user_domain_name: Default
+os_project_domain_name: Default
 public_network_name: public_network
 provider_network_type: flat
 provider_physical_network: physnet1
@@ -13,7 +17,3 @@ router_name: router
 router_gateway: public_network
 router_external_ip_subnet: public_subnet
 router_interfaces: private_subnet
-username: admin
-project_name: admin
-os_user_domain_name: Default
-os_project_domain_name: Default
