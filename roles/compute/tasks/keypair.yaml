@@ -9,4 +9,4 @@
       os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     name: "{{ keypair_name }}"
-    public_key_file: "{{ public_key_path }}"
+    public_key: "{{ public_key }}"
