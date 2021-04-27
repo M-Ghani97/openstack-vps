@@ -13,4 +13,7 @@ router_gateway: public_network
 router_external_ip_subnet: public_subnet
 router_interfaces: private_network
 keypair_name: os_key
-public_key_path: 
+public_key_path:
+vps_image: cirros
+vps_network: private_network
+availability_zone: nova

@@ -1,10 +1,17 @@
 - name: Creating 
   os_server:
-       state: present
-       cloud: mycloud
-       name: vm1
-       image: 
-       key_name: 
-       timeout: 200
-       flavor: 
-       netowrk: 
+    state: present
+    cloud: mycloud
+    name: "{{ item.name }}"
+    image: "{{ vps_image }}"
+    key_name: "{{ keypair_name }}"
+    flavor: "{{ item.flavor }}"
+    network: "{{ vps_network }}"
+    volume_size: "{{ item.disk }}"
+    availability_zone: "{{ availability_zone }}"
+  loop:
+    - {name: vps-1, flavor: "VPS 1vCPU 9GB", disk: "400"}     
+    - {name: vps-2, flavor: "VPS 1vCPU 5GB", disk: "120"}     
+    - {name: vps-3, flavor: "VPS 1vCPU 3GB", disk: "40"}     
+    - {name: vps-4, flavor: "VPS 1vCPU 3GB", disk: "40"}     
+    - {name: vps-4, flavor: "VPS 1vCPU 3GB", disk: "40"}     
