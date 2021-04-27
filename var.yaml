@@ -34,7 +34,7 @@ password: 9u7URzBJDaw91seDhVNgNJIyjdGbKIh4Ps5Y8u8a
 #             CONFIGURE SSH KEYPAIR                 #
 #####################################################
 #keypair_name: os_key
-#public_key_path: ~/.ssh/$HOME/id_rsa.pub
+#public_key_path: ~/.ssh/id_rsa.pub
 #####################################################
 #                   CONFIGURE VPS                   #
 #####################################################

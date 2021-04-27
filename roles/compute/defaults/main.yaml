@@ -1,3 +1,7 @@
+username: admin
+project_name: admin
+os_user_domain_name: Default
+os_project_domain_name: Default
 keypair_name: os_key
 public_key_path: 
 vps_image: cirros
