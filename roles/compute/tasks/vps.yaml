@@ -9,6 +9,8 @@
     network: "{{ vps_network }}"
     volume_size: "{{ item.disk }}"
     availability_zone: "{{ availability_zone }}"
+    security_groups: default
+    auto_ip: yes
   loop:
     - {name: vps-1, flavor: "VPS 1vCPU 9GB", disk: "400"}     
     - {name: vps-2, flavor: "VPS 1vCPU 5GB", disk: "120"}     
