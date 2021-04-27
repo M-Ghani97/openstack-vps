@@ -1,4 +1,4 @@
-- name: Creating 
+- name: Creating VPS
   os_server:
     state: present
     cloud: mycloud
