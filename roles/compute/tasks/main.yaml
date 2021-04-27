@@ -1,0 +1,6 @@
+---
+- include_vars:
+    file: ../../../var.yaml
+- include: flavor.yaml
+- include: keypair.yaml
+- include: vps.yaml

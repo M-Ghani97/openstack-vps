@@ -1,6 +1,12 @@
 - name: Creating Flavor [VPS 1vCPU 9GB]
   os_nova_flavor:
-    cloud: mycloud
+    auth:
+      auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     name: "VPS 1vCPU 9GB"
     ram: "512"
@@ -9,7 +15,13 @@
 
 - name: Creating Flavor [VPS 1vCPU 5GB]
   os_nova_flavor:
-    cloud: mycloud
+    auth:
+      auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     name: "VPS 1vCPU 5GB"
     ram: "5120"
@@ -18,7 +30,13 @@
 
 - name: Creating Flavor [VPS 1vCPU 3GB]
   os_nova_flavor:
-    cloud: mycloud
+    auth:
+      auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     name: "VPS 1vCPU 3GB"
     ram: "3072"
