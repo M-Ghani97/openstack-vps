@@ -1,19 +1,34 @@
-public_network_name: public_network
-provider_network_type: flat
-provider_physical_network: physnet1
-public_subnet_name: public_subnet
-public_subnet_cidr: 10.0.0.0/24
-public_dns_nameserver: 8.8.8.8
-private_network_name: private_network
-private_subnet_name: private_subnet
-private_subnet_cidr: 192.168.1.0/24
-private_dns_nameserver: 8.8.8.8
-router_name: router
-router_gateway: public_network
-router_external_ip_subnet: public_subnet
-router_interfaces: private_network
-keypair_name: os_key
-public_key_path:
-vps_image: cirros
-vps_network: private_network
-availability_zone: nova
+####################################################
+#             CONFIGURE PUBLIC NETWORK             #
+####################################################
+#public_network_name: public_network
+#provider_network_type: flat
+#provider_physical_network: physnet1
+#public_subnet_name: public_subnet
+#public_subnet_cidr: 10.0.0.0/24
+#public_dns_nameserver: 8.8.8.8
+#####################################################
+#             CONFIGURE PRIVATE NETWORK             #
+#####################################################
+#private_network_name: private_network
+#private_subnet_name: private_subnet
+#private_subnet_cidr: 192.168.1.0/24
+#private_dns_nameserver: 8.8.8.8
+#####################################################
+#             CONFIGURE ROUTER                      #
+#####################################################
+#router_name: router
+#router_gateway: public_network
+#router_external_ip_subnet: public_subnet
+#router_interfaces: private_network
+#####################################################
+#             CONFIGURE SSH KEYPAIR                 #
+#####################################################
+#keypair_name: os_key
+#public_key_path: ~/.ssh/$HOME/id_rsa.pub
+#####################################################
+#                   CONFIGURE VPS                   #
+#####################################################
+#vps_image: cirros
+#vps_network: private_network
+#availability_zone: nova
