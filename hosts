@@ -1,1 +1,5 @@
-10.82.3.91
+[py3-hosts]
+10.82.3.93
+
+[py3-hosts:vars]
+ansible_python_interpreter=/usr/bin/python3
