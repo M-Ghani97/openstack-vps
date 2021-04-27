@@ -12,7 +12,7 @@ private_dns_nameserver: 8.8.8.8
 router_name: router
 router_gateway: public_network
 router_external_ip_subnet: public_subnet
-router_interfaces: public_subnet
+router_interfaces: private_subnet
 username: admin
 project_name: admin
 os_user_domain_name: Default
