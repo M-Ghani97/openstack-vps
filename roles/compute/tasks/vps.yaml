@@ -1,6 +1,7 @@
 - name: Creating VPS
   os_server:
-    auth_url: "{{ auth_url }}"
+    auth:
+      auth_url: "{{ auth_url }}"
       username: "{{ username }}"
       password: "{{ password }}"
       project_name: "{{ project_name }}"
