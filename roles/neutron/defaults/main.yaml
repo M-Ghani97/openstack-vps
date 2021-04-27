@@ -13,3 +13,7 @@ router_name: router
 router_gateway: public_network
 router_external_ip_subnet: public_subnet
 router_interfaces: private_network
+username: admin
+project_name: admin
+os_user_domain_name: Default
+os_project_domain_name: Default

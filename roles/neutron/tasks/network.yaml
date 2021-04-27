@@ -1,7 +1,13 @@
 ---
 - name: Creating Public Network
   os_network:
-    cloud: mycloud
+    auth:
+      auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     name: "{{ public_network_name }}"
     external: true
@@ -10,7 +16,13 @@
 
 - name: Creating Public Subnet
   os_subnet:
-    cloud: mycloud
+    auth:
+      auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     network_name: "{{ public_network_name }}"
     name: "{{ public_subnet_name }}"
@@ -20,20 +32,25 @@
 
 - name: Creating Private Network
   os_network:
-    # auth:
-    #   auth_url: http://10.82.3.91:35357/v3
-    #   username: admin
-    #   password: KerR9sbZTYSqj3E6BxRagcdmmgTtsQogdAeBbJr5
-    #   project_name: admin
-    #   os_user_domain_name: Default
-    #   os_project_domain_name: Default
-    cloud: mycloud
+    auth:
+      auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     name: "{{ private_network_name }}"
 
 - name: Creating Private Subnet
   os_subnet:
-    cloud: mycloud
+    auth:
+      auth_url: "{{ auth_url }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      project_name: "{{ project_name }}"
+      os_user_domain_name: "{{ os_user_domain_name }}"
+      os_project_domain_name: "{{ os_project_domain_name }}"
     state: present
     network_name: "{{ private_network_name }}"
     name: "{{ private_subnet_name }}"

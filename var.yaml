@@ -1,4 +1,13 @@
 ####################################################
+#             CONFIGURE KEYSTONE AUTH              #
+####################################################
+# auth_url: 
+# username: admin
+# password: 
+# project_name: admin
+# os_user_domain_name: Default
+# os_project_domain_name: Default
+####################################################
 #             CONFIGURE PUBLIC NETWORK             #
 ####################################################
 #public_network_name: public_network
